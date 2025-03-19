@@ -1,0 +1,107 @@
+:root {
+    --color-primero: black;
+    --color-segundo: white;
+    --color-tercero: rgb(185, 185, 185);
+    --color-cuarto: rgb(9, 9, 49);
+    --color-quinto: red;
+}
+
+body {
+    background-color: var(--color-segundo);
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h3,
+p {
+    margin: 5px;
+}
+
+.escondido {
+    display: none;
+}
+
+p a {
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 200ms;
+    color: var(--color-primero);
+}
+a{
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 200ms;
+    color: var(--color-segundo);
+}
+
+button {
+    transition: 200ms;
+    background-color: var(--color-segundo);
+    color: var(--color-primero);
+    border-radius: 5px;
+}
+
+a:hover:not(#cart),
+button:hover {
+    color: var(--color-tercero);
+    background-color: var(--color-segundo);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    box-shadow: 1px 3px 5px var(--color-tercero);
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+#logo {
+    height: 40px;
+    margin: 20px;
+}
+
+header nav div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav img {
+    height: 25px;
+}
+
+#cuenta-carrito {
+    position: absolute;
+    background-color: var(--color-primero);
+    border-radius: 100%;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    aspect-ratio: 1;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    box-shadow: -1px -3px 5px var(--color-tercero);
+    padding-top: 2px;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: underline;
+}
