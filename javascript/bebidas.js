@@ -12,11 +12,21 @@ const bebidas = [
     {
         id: 3,
         nombre: "Negroni",
-        precio: 150,
+        precio: 200,
     },
     {
         id: 4,
         nombre: "Whisky",
         precio: 150,
+    },
+    {
+        id: 5,
+        nombre: "Vodka",
+        precio: 350,
+    },
+    {
+        id: 6,
+        nombre: "Champagne",
+        precio: 750,
     },
 ]

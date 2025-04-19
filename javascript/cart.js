@@ -18,7 +18,7 @@ function crearTarjetasProductosCarrito() {
     <div>
     <button>-</button>
     <span class="cantidad">${producto.cantidad}</span>
-    <button>+</button>
+    <button id="btn-suma">+</button>
     </div>
     `;
             contenedorTarjetas.appendChild(nuevaBebida);
@@ -70,10 +70,25 @@ document.getElementById("reiniciar").addEventListener("click", () => {
     revisarMensajeVacio();
 });
 
-/** Muestra o esconde el mensaje de que no hay nada en el carrito */
 function revisarMensajeVacio() {
     const productos = JSON.parse(localStorage.getItem(keyLocalstorage));
     carritoVacioElement.classList.toggle("escondido", productos);
     totalesContainer.classList.toggle("escondido", !productos);
 }
 
+document.getElementById("comprar").addEventListener("click", () => {
+    contenedorTarjetas.innerHTML = "";
+    reiniciarCarrito();
+    revisarMensajeVacio();
+    Swal.fire({
+        title: 'Su compra se ha realizado con éxito!',
+        icon: 'success',
+        background: 'white',
+        toast: 'true',
+        showConfirmButton: false,
+        html:'<a href="./index.html"><button>Ok</button></a>',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        stopKeydownPropagation: false,
+    });
+});

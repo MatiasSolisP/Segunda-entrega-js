@@ -16,6 +16,24 @@ function crearTarjetasProductosInicio(productos) {
 crearTarjetasProductosInicio(bebidas);
 
 
+(async () => {
+    const { value: accept } = await Swal.fire({
+        title: "Venta a mayores de 18 años.",
+        input: "checkbox",
+        inputValue: 1,
+        inputPlaceholder: 'Acepto ser mayor de edad. ',
+        confirmButtonText: 'Continuar&nbsp;<i class="fa fa-arrow-right"></i>',
+        inputValidator: (result) => {
+            return !result && "Debes tener más de 18 años para comprar.";
+        },
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        stopKeydownPropagation: false,
+    });
+    if (accept) {
+        Swal.fire("Bienvenido a Pari!");
+    }
+})()
 
 
 

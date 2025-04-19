@@ -48,3 +48,41 @@
     border: unset;
     cursor: pointer;
 }
+
+.swal2-popup.swal2-modal.swal2-show{
+    color: var(--color-segundo);
+    background-color: var(--color-primero);
+    border-radius: 20px;
+    border: solid var(--color-tercero);
+}
+
+.swal2-checkbox{
+    background-color: var(--color-primero) !important;
+}
+
+.swal2-validation-message{
+    color: var(--color-segundo);
+    background-color: var(--color-primero);
+}
+
+.swal2-confirm.swal2-styled{
+    color: var(--color-segundo);
+    background-color: var(--color-primero);
+    border-radius: 10px;
+    border: solid var(--color-segundo);
+}
+
+.swal2-confirm.swal2-styled:hover{
+    color: var(--color-tercero);
+    background-color: var(--color-segundo);
+    border: solid var(--color-tercero);
+}
+
+.swal2-validation-message::before{
+    color: var(--color-primero);
+    background-color: var(--color-segundo);
+}
+
+main{
+    padding: 15px;
+}
